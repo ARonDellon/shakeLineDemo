@@ -63,11 +63,7 @@
     if (fabs(pointOne.y-pointTwo.y)){
         CGFloat k = -(pointOne.x-pointTwo.x)/(pointOne.y-pointTwo.y);
         CGFloat m = center.y - k*center.x;
-//        CGFloat b = m - center.y;
-//        CGFloat p = k*b - center.x;
-//        CGFloat s = distancPow*100 - pow(b, 2) - pow(center.x, 2);
-//        CGFloat t = 1+pow(k, 2);
-//        CGFloat w = s + pow(p, 2)/t;
+
         CGFloat cosD = 1/sqrt(1+pow(k, 2));
 
         CGFloat nowX = center.x+fator*cosD*10*sqrt(distancPow);
