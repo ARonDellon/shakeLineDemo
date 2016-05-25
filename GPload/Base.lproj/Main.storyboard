@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dTC-eZ-RT7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmo-PU-Flm">
+                                <rect key="frame" x="12" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QvG-CP-VAO"/>
+                                    <constraint firstAttribute="width" constant="32" id="W7Q-KX-Fv8"/>
+                                </constraints>
+                                <state key="normal" title="start"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="QvG-CP-VAO"/>
+                                        <exclude reference="W7Q-KX-Fv8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="QvG-CP-VAO"/>
+                                        <include reference="W7Q-KX-Fv8"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xz0-aG-9KK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ykg-WY-Pqv">
+                                <rect key="frame" x="74" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Rzs-CH-36F"/>
+                                    <constraint firstAttribute="width" constant="46" id="iLn-6k-bzg"/>
+                                </constraints>
+                                <state key="normal" title="stop"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Rzs-CH-36F"/>
+                                        <exclude reference="iLn-6k-bzg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Rzs-CH-36F"/>
+                                        <include reference="iLn-6k-bzg"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="amh-z0-2bV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ykg-WY-Pqv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3hH-w1-qtp">
+                                <variation key="heightClass=regular-widthClass=compact" constant="140"/>
+                            </constraint>
+                            <constraint firstItem="Nmo-PU-Flm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7Qz-pA-Pts">
+                                <variation key="heightClass=regular-widthClass=compact" constant="140"/>
+                            </constraint>
+                            <constraint firstItem="Nmo-PU-Flm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hXD-9G-YkQ"/>
+                            <constraint firstItem="Ykg-WY-Pqv" firstAttribute="leading" secondItem="Nmo-PU-Flm" secondAttribute="trailing" constant="10" id="s0S-JN-e0E">
+                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hXD-9G-YkQ"/>
+                                <exclude reference="s0S-JN-e0E"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="hXD-9G-YkQ"/>
+                                <include reference="s0S-JN-e0E"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="DqG-gY-kbk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295.5" y="107.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SAt-XM-Lrv">
+            <objects>
+                <navigationController id="dTC-eZ-RT7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ehB-fo-vOZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="w8K-6w-2Wr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixZ-Se-YzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-622.5" y="107.25"/>
+        </scene>
+    </scenes>
+</document>
