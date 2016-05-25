@@ -36,7 +36,7 @@
 - (void)setEndPointArr:(NSArray<NSString *> *)linesArr;
 
 /**
- *  set the ootion at the opposite position in shake array
+ *  set the option at the opposite position in shake array
  *  1  : shake nomal
  *  -1 : shake reversed
  *  0  : do not shake
