@@ -19,7 +19,7 @@
 
 @property (nonatomic) CGFloat progress;
 @property (nonatomic) CGFloat animationProgress;
-@property (nonatomic,strong)NSTimer *timer;
+@property (nonatomic,strong)CADisplayLink *displayLink;
 @property (nonatomic,strong)NSArray *startArr;
 @property (nonatomic,strong)NSArray *endArr;
 @property (nonatomic,strong)NSArray *shakeOptionArr;
@@ -54,15 +54,13 @@
 
 - (void)start{
     
-    if (!self.timer) {
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.04 target:self selector:@selector(startAnimation) userInfo:nil repeats:YES];
-    }
-
+    self.displayLink.paused = NO;
 }
 
 - (void)stop{
-    [self.timer invalidate];
-    self.timer = nil;
+    self.displayLink.paused = YES;
+    [self.displayLink invalidate];
+    self.displayLink = nil;
     _progress = 0;
     _animationProgress = 0;
     [self setNeedsDisplay];
@@ -163,5 +161,13 @@
     return _shakeOptionArr;
 }
 
+- (CADisplayLink *)displayLink {
+    if (!_displayLink) {
+        _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(startAnimation)];
+        _displayLink.paused = YES;
+        [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    }
+    return _displayLink;
+}
 
 @end
