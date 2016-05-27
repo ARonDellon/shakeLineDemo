@@ -20,7 +20,7 @@
 
 /**
  *  all start point of lines in this array ,user NSStringFromPoint(CGPoint) change
- *  the CGPoint to NSString , then put them in this arrat in order
+ *  the CGPoint to NSString , then put them in this array in order
  *
  *  @param linesArr start point array
  */
@@ -29,7 +29,7 @@
 
 /**
  *  all end point of lines in this array ,user NSStringFromPoint(CGPoint) change
- *  the CGPoint to NSString , then put them in this arrat in order
+ *  the CGPoint to NSString , then put them in this array in order
  *
  *  @param linesArr end point array
  */
